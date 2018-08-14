@@ -1,0 +1,26 @@
+#hidden {
+  display: none;
+}
+
+.mouse-event {
+  display: flex;
+  border: 1px solid black;
+  height: 250px;
+  width: 500px;
+}
+
+.container {
+  display: flex;
+}
+
+.x-cord {
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+}
+
+.y-cord {
+  border: 1px solid black;
+  height: 50px;
+  width: 100px;
+}
