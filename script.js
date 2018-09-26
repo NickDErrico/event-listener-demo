@@ -1,6 +1,6 @@
 // DOM ELEMENTS :
 const button = document.querySelector(".click-event");
-const focus = document.getElementsByClassName("focus-event");
+const focus = document.getElementsByClassName("focus-event")[0];
 const key = document.getElementById("key");
 const hidden = document.getElementById("hidden");
 const input = document.querySelectorAll(".input-event")[0];
@@ -12,11 +12,30 @@ const mouse = document.querySelector(".mouse-event");
 
 // EVENT LISTENERS :
 
+// elementToAddEventListenerTo.addEventListener('event-type', function(e) {
+//   //Do something
+// })
+
 // CLICK :
 // DISPLAY THE HIDDEN TEXT
 
+button.addEventListener("click", function(e) {
+  hidden.id = "";
+  hidden.style.backgroundColor = "yellow";
+  const blah = document.querySelector("#blah");
+  let newDiv = document.createElement("div");
+  newDiv.style.width = "200px";
+  newDiv.style.height = "200px";
+  newDiv.style.backgroundColor = "red";
+  blah.appendChild(newDiv);
+});
+
 // FOCUS :
 // ADD SOME STYLE TO THE INPUT BOX
+
+focus.addEventListener("focus", function(e) {
+  focus.style.backgroundColor = "limegreen";
+});
 
 // KEY-UP/KEY-DOWN :
 // TRACK THE KEY
