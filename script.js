@@ -9,6 +9,11 @@ const xcord = document.querySelector(".x-cord");
 const ycord = document.querySelector(".y-cord");
 const body = document.getElementsByTagName("body")[0];
 const mouse = document.querySelector(".mouse-event");
+const circle = document.querySelector(".circle");
+
+// circle.addEventListener("click", function(e) {
+//   console.log(e);
+// });
 
 // EVENT LISTENERS :
 
@@ -40,8 +45,24 @@ focus.addEventListener("focus", function(e) {
 // KEY-UP/KEY-DOWN :
 // TRACK THE KEY
 
+body.addEventListener("keypress", function(e) {
+  console.log(e);
+  if (e.code === "Space") {
+    display.textContent += " ";
+  } else {
+    display.textContent += e.key;
+  }
+});
+
 // INPUT :
 // FINISH THE SENTENCE
 
 // MOUSE-ENTER/MOUSE-LEAVE :
 // DISPLAY THE MOUSE LOCATION
+
+mouse.addEventListener("mousemove", function(e) {
+  xcord.innerText = e.x;
+  ycord.innerText = e.y;
+  circle.style.top = `${e.x}px`;
+  circle.style.left = `${e.y}px`;
+});
